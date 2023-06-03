@@ -15,10 +15,10 @@ The dataset we use is the ISOT Fake News dataset introduced by ISOT Research Lab
 To get insight into this dataset, we visualized it with word clouds for real and fake news respectively. Figure 1(a). shows the word cloud of the real news in the dataset, and Figure 1(b). shows the one of the fake news in the dataset.
 
 ###### Figure 1(a).
-![](https://i.imgur.com/07Rh4uD.png "Figure 1(a).")
+![](![image](https://github.com/hhumayune/Fake-News-Detector/assets/92355531/44c656cd-da62-4690-b606-5b27065e30f7))
 
 ###### Figure 1(b).
-![](https://i.imgur.com/uSVXnyz.png "Figure 1(b).")
+![](![Screenshot 2023-06-03 220442](https://github.com/hhumayune/Fake-News-Detector/assets/92355531/8081014f-40a4-4808-95a6-00da1c3df10f))
 
 We can see that, in the real news word cloud, ‘Trump’, ‘say’, ‘Russia’, ‘House’, ‘North’, and Korea’ appeared frequently; while in fake news one, ‘VIDEO’, ‘Trump’, ‘Obama’, ‘WATCH’, and ‘Hillary’ appeared the most frequently. ‘Say’ appears frequently in real news but does not in fake news. ‘VIDEO’, and ‘WATCH’ appear frequently in fake news but do not in real news. From these two word clouds, we can get some important information to differentiate the two classes of data.
 The original form of the dataset is two CSV files containing fake and real news respectively. We combined the dataset and split it into training, validation, and test sets with shuffling at the ratio of 64%:16%:20%. The original combined dataset contains 44,898 pieces of data, and Table 1. shows the distribution of data in the training, validation, and test sets.

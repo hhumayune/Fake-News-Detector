@@ -54,8 +54,18 @@ Bidirectional LSTM (BiLSTM) [12] consists of two LSTMs: one taking the input fro
 * **CNN-BiLSTM**  
 In this section, we used Convolutional Neural Network (CNN) as the upper layer of the bidirectional LSTM. That is, the output of the CNN is the input of the BiLSTM. This architecture extracts the maximum number of features and information of the input text with convolutional layers, and also utilizes the bidirectional benefit of BiLSTM to ensure that the network can output based on its entire input text.
 
+* **BERT**  
+In the Natural Language Processing field, Transformers become more and more dominant. BERT [13], the acronym for Bidirectional Encoder Representations from Transformers, is a transformer-based machine learning technique that changed the NLP world in recent years due to its state-of-the-art performance. Its two main features are that it is a deep transformer model so that it can process lengthy sentences effectively using the ‘attention’ mechanism, and it is bidirectional so that it will output based on the entire input sentence.  
+We used BERT to handle the dataset and construct a deep learning model by fine-tuning the bert-based-uncased pre-trained model for fake news detection.
+Training a model for natural language processing is costly and time-consuming because of the large number of parameters. Fortunately, we have pre-trained models of BERT that enable us to conduct transfer learning efficiently. We choose the pre-trained model of bert-base-uncased from a lot of models with different kinds of parameters. The chosen one consists of a base amount of parameters and does not consider cases of letters (upper-case and lower-case).
+
 # Conclusions
-In recent years, fake news detection plays an important role in national security and politics. In this paper, we covered the implementation of deep learning models (LSTM, BiLSTM, CNN-BiLSTM) and LSTM specifically for fake news detection on the ISOT Fake News dataset. We applied the balanced and imbalanced datasets with preprocessing and word embedding to get word sequences, and then input these sequences into our models achieving a test accuray of 97.7%.
+In recent years, fake news detection plays an important role in national security and politics. In this paper, we covered the implementation of deep learning models (LSTM, BiLSTM, CNN-BiLSTM) and LSTM specifically for fake news detection on the ISOT Fake News dataset. We applied the balanced and imbalanced datasets with preprocessing and word embedding to get word sequences, and then input these sequences into our models achieving a test accuracy of 97.7%.
+ 
+# Testing
+We can test the model by putting the news titles and then they would be verifed by the trained model.
+![Screenshot 2023-06-03 221537](https://github.com/hhumayune/Fake-News-Detector/assets/92355531/5ece38e8-d14a-405f-92f9-554d5dcab695)
+![Screenshot 2023-06-03 221614](https://github.com/hhumayune/Fake-News-Detector/assets/92355531/c97ef8d8-8029-446b-8e50-92605c3a11df)
 
 # References
 [1] Lazer, D. M., Baum, M. A., Benkler, Y., Berinsky, A. J., Greenhill, K. M., Menczer, F., ... & Zittrain, J. L. (2018). The science of fake news. Science, 359(6380), 1094-1096.  
